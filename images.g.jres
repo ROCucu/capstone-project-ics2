@@ -1,9 +1,4 @@
 {
-    "image1": {
-        "data": "hwQQABAAAAAAAAAAAAAAAAAAAPAPAAAAAPD///7gRAAA/+/v7k9NAPD/Lv/k/v8A8O/yv9EuQv//4vL+3yRC/y/i8k7dJFIPL+LyTt0kUg//4vL+3yRC//Dv8r/RLkL/8P8u/+T+/wAA/+7v7k9NAADw///+4EQAAAAA8A8AAAAAAAAAAAAAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "Player"
-    },
     "image2": {
         "data": "hwQQABAAAAAAAAAAAAAAAAAAAP//DwAAAP//8P//AADwD/////APAPDwDw///w8A8PD/AA/w/wAA//8A////8AD///AP8P/wAP//8P//Dw8A//8P8PAPDwD///D/D/8AAP//AP/wDwAA8P//AP8AAAAA/w//DwAAAADw//8AAAAAAAAAAAAAAA==",
         "mimeType": "image/x-mkcd-f4",
@@ -18,6 +13,11 @@
         "data": "hwQTABMAAAAAAAAA//8AAAAAAAAAAADw7u4PAAAAAAAAAADv7u7+AAAAAAAAAADv7u7+AAAAAACIiIjv7u7+iIgIAABoaYjv7u7+iIgIAABoaYjv7u7+iIgIAABoZoj27u5vAAAAAABoZohm//9mAAAAAABoaYiIiIiIiIgIAABoaYiIiIiIiIgIAACIiIgAAACAiIgIAAAAAAAAAAAAAAAAAAAAAACIAAAAAAAAAADw///vaGYAAAAAAAAfERHh7u4AAAAAAAAfERHh7u4AAAAAAADw///vaGYAAAAAAAAAAACIAAAAAAAAAAA=",
         "mimeType": "image/x-mkcd-f4",
         "displayName": "Fighter"
+    },
+    "image1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAPAPAAAAAPD///7gRAAA/+/v7k9NAPD/Lv/k/v8A8O/yv9EuQv//4vL+3yRC/y/i8k7dJFIPL+LyTt0kUg//4vL+3yRC//Dv8r/RLkL/8P8u/+T+/wAA/+7v7k9NAADw///+4EQAAAAA8A8AAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Player"
     },
     "*": {
         "mimeType": "image/x-mkcd-f4",

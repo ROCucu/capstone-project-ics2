@@ -325,17 +325,20 @@ function EnemyAlly_Spawn_Places () {
     }
 }
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Boss, function (sprite, otherSprite) {
-	
+    otherSprite.hit(1)
+sprites.destroy(sprite)
 })
-function Randomly_Generated_Tilemaps () {
-	
-}
 sprites.onDestroyed(SpriteKind.Boss, function (sprite) {
     info.changeScoreBy(10)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile3`, function (sprite, location) {
     info.changeLifeBy(4)
     tiles.setTileAt(location, assets.tile`transparency16`)
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.castle.tileDarkGrass3, function (sprite, location) {
+    tiles.loadMap(tilemap1)
+    tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 10))
+    Randomly_Generated_Tilemaps()
 })
 scene.onHitWall(SpriteKind.orbs, function (sprite, location) {
     sprites.destroy(sprite)
@@ -364,6 +367,14 @@ sprites.onOverlap(SpriteKind.orbs, SpriteKind.Player, function (sprite, otherSpr
     sprites.destroy(sprite)
     info.changeLifeBy(-1)
 })
+function Randomly_Generated_Tilemaps () {
+    RandomTileMap = randint(0, 3)
+    if (RandomTileMap >= 1) {
+        tilemap1 = tiles.createMap(tilemap`level2`)
+    } else {
+        tilemap1 = tiles.createMap(tilemap`level0`)
+    }
+}
 sprites.onOverlap(SpriteKind.orbs, SpriteKind.Projectile, function (sprite, otherSprite) {
     sprites.destroy(sprite)
     sprites.destroy(otherSprite)
@@ -381,8 +392,10 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
     }
 })
 let mySprite2: Sprite = null
-let tilemap1: tiles.WorldMap = null
+let tilemap2: tiles.WorldMap = null
+let RandomTileMap = 0
 let stop = 0
+let tilemap1: tiles.WorldMap = null
 let mySprite4: Sprite = null
 let RandomFriendly = 0
 let mySprite3: Sprite = null
@@ -391,13 +404,7 @@ let projectile: Sprite = null
 let TileDecider = 0
 let mySprite: Sprite = null
 let Attack = 0
-let tilemap2: tiles.WorldMap = null
-let RandomTileMap = randint(1, 2)
-if (RandomTileMap == 1) {
-    tilemap2 = tiles.createMap(tilemap`level2`)
-} else {
-    tilemap2 = tiles.createMap(tilemap`level0`)
-}
+Randomly_Generated_Tilemaps()
 let Mover = 1
 let Boss_Checker = 1
 Attack = 0
@@ -433,13 +440,14 @@ if (TileDecider == 1) {
     EnemyAlly_Spawn_Places()
 }
 game.onUpdateInterval(10, function () {
-    tilemap1 = tiles.getLoadedMap()
+    tilemap2 = tiles.getLoadedMap()
     if (stop == 0) {
         mySprite.vx = speed
     }
     mySprite.vy += 3
     boss.setPosition(mySprite.x, mySprite.y - 144 * Mover)
     info.changeScoreBy(0.001)
+    tiles.connectMapById(tilemap1, tilemap2, ConnectionKind.Door1)
 })
 game.onUpdateInterval(3000, function () {
     if (Boss_Checker == 1) {
