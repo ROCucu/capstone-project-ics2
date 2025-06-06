@@ -28,7 +28,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile`, function (sprite, lo
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     mySprite.vy += -80
 })
-sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Boss, function (sprite, otherSprite) {
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Boss, function (sprite, otherSprite: Boss) {
     otherSprite.hit(1)
 sprites.destroy(sprite)
 })
