@@ -1,5 +1,5 @@
 {
-    "name": "Unit 6: Capstone Project (ICS2)",
+    "name": "Unit 6: Capstone Project (ICS2) - Copy",
     "description": "",
     "dependencies": {
         "device": "*"
@@ -24,5 +24,5 @@
     "supportedTargets": [
         "arcade"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "blocksprj"
 }
