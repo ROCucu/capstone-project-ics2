@@ -1,8 +1,10 @@
 {
-    "name": "Unit 6: Capstone Project (ICS2) - Copy",
+    "name": "Unit 6: Capstone Project (ICS2) - Copy #2",
     "description": "",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "Sprite Grid": "github:microsoft/arcade-grid#v1.3.0",
+        "tilemaps": "github:microsoft/pxt-tilemaps#v1.12.0"
     },
     "files": [
         "main.blocks",
@@ -24,5 +26,5 @@
     "supportedTargets": [
         "arcade"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "blocksprj"
 }
